@@ -86,6 +86,7 @@ An example of such a sequence is: \[ a_n = \frac{1}{2^n}, n \geq 0. \] If we loo
 
 <p>Let's extend that table a little further...</p>
 
+<div id="seqTable"></div>
 
 <p>If you don't believe me, try it for yourself! Enter a value of \( n \) and see how the values of the sequence change as you increase \(n \)</p>
 
@@ -104,6 +105,25 @@ A sequence \( x_n \) is said to be convergent to a limit \( L \) if given any re
 
 Let's break this down using the example above.
 
+<script>
+	
+	var table = document.createElement('table');
+	for(i = 0; i < 3; i++) { // Rows
+		var row = document.createElement('tr');
+		for(j = 0; j < 7; j++) { // Columns
+			var col = document.createElement('td');
+			if(j==0) {
+				col.innerHTML = ['\\(n\\)', '\\(a_n \\)', 'Decimal'][i]
+			} else {
+				col.innerHTML = [j, '\\( \\frac{1}{' + Math.pow(2, j) + '} \\)', Math.pow(2,-j)][i]
+			}
+			col.setAttribute('id', 'r'+i+'c'+j)
+			row.appendChild(col)
+		}
+		table.appendChild(row)
+	}
+	document.getElementById('seqTable').appendChild(table);
 
 
+</script>
 </body>
