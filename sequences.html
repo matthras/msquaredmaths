@@ -1,0 +1,109 @@
+<head>
+<style>
+
+	table, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+
+	th, td {
+		padding: 10px;
+	}
+</style>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+<h1>Sequences &amp; Series</h1>
+
+<h2>Introduction</h2>
+
+<h3>What is a sequence?</h3>
+
+<p>A sequence is an ordered collection of numbers.</p>
+
+<p>Examples of sequences include: 
+<ul>
+	<li> \( 1, 2, 3, 4, 5, 6, \dots \) </li>
+	<li> \( 1, 0.1, 0.01, 0.001, 0.0001, 0.00001, \dots \) </li>
+	<li> \( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \dots \) </li>
+</ul>
+</p>
+
+<p>In a sequence:
+<ul>
+	<li>Numbers can be repeated.</li>
+	<li>Numbers do not have to follow a pattern (however, the interesting ones do!)</li>
+</ul>
+
+<p>Sequences that follow a pattern have certain properties that can be studied further, and from there on we'll only look at those sequences. </p>
+
+<h3>How can we represent sequences?</h3>
+	
+<p>For sequences that follow a pattern, we can represent them using a formula.</p>
+
+<p>We can also represent a sequence using a recurrence relation.</p>
+
+<h2>Limit of a Sequence</h2>
+
+You may have noticed that certain infinite sequences and series appear to approach a certain value.
+
+An example of such a sequence is: \[ a_n = \frac{1}{2^n}, n \geq 0. \] If we look at the numbers: 
+
+<table>
+<thead>
+	<td>\(n\)</td>
+	<td>\(1\)</td>
+	<td>\(2\)</td>
+	<td>\(3\)</td>
+	<td>\(4\)</td>
+	<td>\(5\)</td>
+	<td>\(6\)</td>
+</thead>
+<tbody>
+	<tr>
+		<td>\(a_n\)</td>
+		<td>\(\frac{1}{2}\)</td>
+		<td>\(\frac{1}{4}\)</td>
+		<td>\(\frac{1}{8}\)</td>
+		<td>\(\frac{1}{16}\)</td>
+		<td>\(\frac{1}{32}\)</td>
+		<td>\(\frac{1}{64}\)</td>
+	</tr>
+	<tr>
+		<td>Decimal</td>
+		<td>\(1\)</td>
+		<td>\(0.5\)</td>
+		<td>\(0.25\)</td>
+		<td>\(0.125\)</td>
+		<td>\(0.0625\)</td>
+		<td>\(0.03125\)</td>
+	</tr>
+</tbody>
+</table>
+
+<p>Let's extend that table a little further...</p>
+
+
+<p>If you don't believe me, try it for yourself! Enter a value of \( n \) and see how the values of the sequence change as you increase \(n \)</p>
+
+<!-- Insert applet here where one can play around with sequences by changing the value of n. We can also include a D3 graph here for visualisation?  -->
+
+<p>Notice how when we make \( n \) bigger, the numbers in the sequence gets closer and closer to zero? </p>
+
+
+<h3>Mathematical Definition of Convergence</h3>
+
+Warning: This section assumes that you are familiar with the concept of a limit. The content covered in this section is typically taught in undergraduate mathematics study at college/university.
+
+A mathematical definition of convergence can be given as follows: 
+
+A sequence \( x_n \) is said to be convergent to a limit \( L \) if given any real positive number \( \epsilon \) there exists an integer \( n \) such that for all \( M > n \), \( |x_M - L| < \epsilon \).
+
+Let's break this down using the example above.
+
+
+
+</body>
