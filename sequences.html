@@ -88,6 +88,9 @@ An example of such a sequence is: \[ a_n = \frac{1}{2^n}, n \geq 0. \] If we loo
 
 <div id="seqTable"></div>
 
+n = <input type="number" id="nInput"> <br>
+<button id="nButton" onClick="nSeq();">Show me the sequence!</button>
+
 <p>If you don't believe me, try it for yourself! Enter a value of \( n \) and see how the values of the sequence change as you increase \(n \)</p>
 
 <!-- Insert applet here where one can play around with sequences by changing the value of n. We can also include a D3 graph here for visualisation?  -->
@@ -115,7 +118,7 @@ Let's break this down using the example above.
 			if(j==0) {
 				col.innerHTML = ['\\(n\\)', '\\(a_n \\)', 'Decimal'][i]
 			} else {
-				col.innerHTML = [j, '\\( \\frac{1}{' + Math.pow(2, j) + '} \\)', Math.pow(2,-j)][i]
+				col.innerHTML = [j, '\\( \\frac{1}{2^'+(j)+'} = \\frac{1}{' + Math.pow(2, j) + '} \\)', Math.pow(2,-j)][i]
 			}
 			col.setAttribute('id', 'r'+i+'c'+j)
 			row.appendChild(col)
@@ -123,6 +126,16 @@ Let's break this down using the example above.
 		table.appendChild(row)
 	}
 	document.getElementById('seqTable').appendChild(table);
+
+	var nSeq = function (){
+		var n = parseInt(document.getElementById('nInput').value);
+		for(j=1; j < 7; j++) {
+			document.getElementById('r0c'+j).innerHTML = j+n-1;
+			MathJax.Hub.Queue(['Text', MathJax.Hub.getAllJax('r1c'+j)[0], '\\frac{1}{2^{'+(j+n-1)+'}} = \\frac{1}{'+ Math.pow(2, j) +'}' ]);
+			// document.getElementById('r1c'+j).innerHTML = '\\( \\frac{1}{2^'+(j+n-1)+'} \\)';
+			document.getElementById('r2c'+j).innerHTML = Math.pow(2,-(j+n-1));
+		}
+	}
 
 
 </script>
