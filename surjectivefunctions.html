@@ -1,0 +1,43 @@
+<head>
+<style>
+
+	table, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+
+	th, td {
+		padding: 10px;
+	}
+</style>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+<h1>Surjective (onto) Functions</h1>
+
+This section assumes that you're reading this after reading the section on Injective Functions.
+
+Interestingly enough, the mathematical definition for surjective functions is much more straightforward:
+
+A function \( f: A \to B \) is surjective where for all \( b \in B \), there exists \( a \in A \) such that \( f(a) = b \), 
+
+which loosely translates to every value b in the set B (or second set) has a corresponding value in the set A (or first set). Or in the context of x-y graphs, every \( y\ )-value has a corresponding \(x\)-value.
+
+Surjective functions are a little easier to understand in terms of set theory, so let's look at some examples of surjective and non-surjective functions.
+
+<!-- Diagrams -->
+
+In terms of graphs, we need to look at the sets defined by the function in order to determine if a function is surjective or not. Let's look at the following two examples:
+
+\( f: \mathbb{R} \to \mathbb{R}_{\geq 0}, f(x) = x^2 \)
+
+\( g: \mathbb{R} \to \mathbb{R}, g(x) = x^2 \)
+
+The only difference is that in function \(g \), the second set is the set of all real numbers, whereas in function \(f\), the second set is the set of all real positive numbers including zero. The reason that \(g\) is NOT a surjective function is because there is a set of y-values in the second set (all negative real numbers) that don't have a corresponding \(x-value\). Recall that we established before that in the definition of a surjective function, ALL values in the second set have a corresponding value in the first set. 
+
+If this is a little difficult to understand, it may help to read the Functions section if you haven't done so already.
+
+</body>
